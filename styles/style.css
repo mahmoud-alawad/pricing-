@@ -23,13 +23,66 @@ width: 1440px;
 margin: 5rem auto;
 justify-content: center;
 }
+.header{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem auto;
+}
+.header__title{
+    color: var(--GrayishBlue);
 
+}
+.header .header__content{
+    display: flex;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.header__content span{
+    color: var(--LightGrayishBlue);
+    padding: 0.3rem 1rem;
+    text-align: center;
+    font-size: 1rem;
+}
+.header__content .header__btn{
+    width: 3.9rem;
+    height: 2rem;
+    background-color: #696fdd;
+    border-radius: 5rem;
+    position: relative;
+    padding: 8px;
+}
+
+.header__btn #header_btn_togg{
+    width: 35%;
+    height: 1.5rem;
+    background-color: var(--VeryLightGrayishBlue);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 14px;
+    transform: translate(2%, -50%);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.4s linear;
+}
+/*to move the button to left*/
+.animateBtn{
+    left: 0 !important;
+    padding: 15px !important;
+
+}
 .card{
 background-color: var(--white);
-width: calc(100% / 3);
-padding: 0rem 1.5rem;
-padding-top: 3rem;
-display: block;
+width: calc(100% / 3.6);
+height: 100%;
+padding: 1rem 1.5rem;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
 box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.2);
 border-radius: 10px;
 }
@@ -47,6 +100,7 @@ position: relative;
 color: var(--DarkGrayishBlue);
 font-weight: 700;
 padding-bottom: 0.5rem;
+transition: all 0.5s ease-out;
 }
 .card h1::after{
 content: "";
@@ -78,7 +132,8 @@ transform: translate(-50, 50);
 }
 .card .card__btn{
 width: 100%;
-margin: 2rem auto;
+margin: 0.5rem auto;
+margin-top: 2rem;
 text-align: center;
 height: 3rem;
 border: none;
@@ -92,18 +147,19 @@ letter-spacing: 0.2rem;
 cursor: pointer;  
 outline: none; 
 }
- .card__btn:hover{
+ .card__btn:hover:not(.professional){
     background-image: var(--white);
+    background-color: var(--white);
     color: #696fdd;
     border: 1px solid #696fdda3; 
 }
 .professional{
-width: calc(100% / 3.5); 
+width: calc(100% / 4.1); 
 transform: scale(1.1);
 background-image: var(--LinearGradient);
 color: var(--white);
-padding-top: 5.8rem;
-padding-bottom: 5rem;
+height: 120%;
+
 }
 
 .professional h5,
@@ -112,16 +168,35 @@ padding-bottom: 5rem;
 .professional p{
 color: var(--white);
 }
-
-.master{
-   
-
-
+.professional .card__btn{
+    background-image: var(--white);
+    background-color: var(--white);
+    color: #696fdd;
 }
+.professional .card__btn:hover{
+background-image: var(--LinearGradient);
+color: var(--white);
+border: 1px solid var(--white);
+}
+
+
+
+
 
 @media screen and (max-width: 1200px){
     .container{
         flex-direction: column;
-        margin:2rem 5rem ;
+        margin: 2rem auto ;
+        margin-left: 1.5rem;
+        width: 1000px;
+    }
+    .card{
+        width: 33%;
+        margin-bottom: 1rem;
+    }
+    .professional{
+        transform: scale(1);
+        width: 33%;
+
     }
 }
