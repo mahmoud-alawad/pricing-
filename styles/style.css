@@ -16,6 +16,14 @@
 }
 body{
 font-family: 'Montserrat', sans-serif;
+background-color: var(--VeryLightGrayishBlue);
+background: url(../images/bg-top.svg) no-repeat right;
+position: relative;
+}
+.bottom__illustration{
+    position: absolute;
+    bottom: 0;
+    z-index: -999;
 }
 .container{
 display: flex;
