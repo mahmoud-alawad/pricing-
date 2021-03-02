@@ -1,0 +1,127 @@
+@import url(https://fonts.google.com/specimen/Montserrat);
+
+:root{
+    --VeryLightGrayishBlue: hsl(240, 78%, 98%);
+--LightGrayishBlue: hsl(234, 14%, 74%);
+--GrayishBlue: hsl(233, 13%, 49%);
+ --DarkGrayishBlue: hsl(232, 13%, 33%);
+ --LinearGradient: linear-gradient(150deg,#a3a8f0 , #696fdd);
+ --white: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+font-family: 'Montserrat', sans-serif;
+}
+.container{
+display: flex;
+width: 1440px;
+margin: 5rem auto;
+justify-content: center;
+}
+
+.card{
+background-color: var(--white);
+width: calc(100% / 3);
+padding: 0rem 1.5rem;
+padding-top: 3rem;
+display: block;
+box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.2);
+border-radius: 10px;
+}
+.card h5{
+color: var(--LightGrayishBlue);
+font-size: 2rem;
+justify-self: self-start;
+text-align: center;
+
+} 
+.card h1{
+font-size: 5rem;
+text-align: center;
+position: relative;
+color: var(--DarkGrayishBlue);
+font-weight: 700;
+padding-bottom: 0.5rem;
+}
+.card h1::after{
+content: "";
+position: absolute;
+width: 100%;
+height: 1px;
+background-color: var(--LightGrayishBlue);
+top: 100%;
+left: 0;
+transform: translate(-50, 50);
+}
+.card p{
+color: var(--GrayishBlue);
+text-align: center;
+font-size: 2rem;
+font-weight: 700;
+line-height: 2;
+position: relative;
+}
+.card p::after{
+content: "";
+position: absolute;
+width: 100%;
+height: 1px;
+background-color: var(--LightGrayishBlue);
+top: 100%;
+left: 0;
+transform: translate(-50, 50);
+}
+.card .card__btn{
+width: 100%;
+margin: 2rem auto;
+text-align: center;
+height: 3rem;
+border: none;
+border-radius: 5px;
+background-image: var(--LinearGradient);
+color: var(--white);
+font-size: 1.2rem;
+text-transform: uppercase;
+font-weight: 700;
+letter-spacing: 0.2rem;
+cursor: pointer;  
+outline: none; 
+}
+ .card__btn:hover{
+    background-image: var(--white);
+    color: #696fdd;
+    border: 1px solid #696fdda3; 
+}
+.professional{
+width: calc(100% / 3.5); 
+transform: scale(1.1);
+background-image: var(--LinearGradient);
+color: var(--white);
+padding-top: 5.8rem;
+padding-bottom: 5rem;
+}
+
+.professional h5,
+.professional h2,
+.professional h1,
+.professional p{
+color: var(--white);
+}
+
+.master{
+   
+
+
+}
+
+@media screen and (max-width: 1200px){
+    .container{
+        flex-direction: column;
+        margin:2rem 5rem ;
+    }
+}
